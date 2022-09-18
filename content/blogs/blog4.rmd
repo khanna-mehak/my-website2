@@ -10,13 +10,6 @@ categories:
 date: 2017-10-31T22:42:51-05:00
 draft: false
 ---
-```{r load-libraries, echo=FALSE}
-library(patchwork)  
-library(magick)
-library(ggplot2)
-library(gridExtra)
-
-```
 # My Childhood
 
 
@@ -52,6 +45,7 @@ In addition to my professional experience, I am an enthusiastic traveller and ha
 ![My favorite park: Six Flags](https://www.thefamilyvacationguide.com/wp-content/uploads/2021/10/SFFT_Cliffhanger05_11x17_150dpi.jpeg){width=100%}
 
 # My life at London Business School
+
 
 
 
