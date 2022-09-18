@@ -10,7 +10,7 @@ params:
     subtitle: |-
       Currently reading for Masters in Analytics & Management (MAM) at London Business School.
       
-      THIS IS MY PORTFOLIO WEBSITE for AM01 Applied Statistics.
+      THIS IS MY PORTFOLIO WEBSITE for AM01 Applied Statistics. 
     title: Hi, I am  Mehak Khanna
   blog: {}
   contact:
@@ -76,8 +76,8 @@ params:
       - name: Elements
         url: elements.html
     menu: Menu
-    subtitle: By HTML5 Up
-    title: Forty
+    subtitle: 
+    title: Mehak's portfolio website
   tiles:
     enable: yes
     showcase:
@@ -106,10 +106,10 @@ params:
         title: Brexit Poll Analysis
         url: blogs/brexit
         
-      # - image: pic05.jpg
-      #   subtitle: Ipsum Dolor Sit Amet
-      #   title: Consequat
-      #   url: blogs/ipsum
+      - image: pic05.jpg
+        subtitle: Ipsum Dolor Sit Amet
+        title: Consequat
+        url: blogs/ipsum
         
       - image: travel_1.JPG
         subtitle: A collection of my favourite Travel memories
