@@ -110,6 +110,11 @@ params:
         subtitle: A collection of my favourite Travel memories
         title: My Travel Stories
         url: blogs/travel
+        
+      - image: a gorgeous_image.jpg
+        subtitle: Resume          
+        title: My CV
+        url: docs/CV.pdf
   two:
     buttonText: Get Started
     enable: yes
