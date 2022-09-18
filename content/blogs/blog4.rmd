@@ -16,8 +16,8 @@ I have studied Bachelors in Technology at Punjab Engineering College, Chandigarh
 
 I am currently reading for Masters in Analytics and Management at London Business School and am aiming to pursue a career in consulting post my course at LBS. 
 
-![Current Studying at London Business school](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg)
+![Current Studying at London Business school](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg){width=750px}
 
 In addition to my professional experience, I am an enthusiastic traveller and have been to over 25+ cities across 3 continents. My source of adrenal rush includes trying roller coasters around these cities and I have covered over 30+ roller coasters including the world’s fastest and steepest ones
 
-![](https://www.coaster101.com/wp-content/uploads/2010/05/ferrari.jpg)
+![My favorite roller coaster ride: Formula Rossa](https://www.coaster101.com/wp-content/uploads/2010/05/ferrari.jpg){width=750px}
