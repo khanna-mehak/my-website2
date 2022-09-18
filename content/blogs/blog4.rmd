@@ -1,8 +1,8 @@
 ---
-title: "Aliquam"
+title: "Welcome to my world"
 description: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
-slug: "aliquam"
-image: pic07.jpg
+slug: "About_me"
+image: abt_me_1.JPG
 keywords: ""
 categories: 
     - ""
@@ -10,3 +10,14 @@ categories:
 date: 2017-10-31T22:42:51-05:00
 draft: false
 ---
+Hello, I am Mehak Khanna. I was born and raised in India. I currently live in London, United Kingdom. I have lived across various cities in North and Western parts of India including Amritsar, Ahmedabad, Mumbai. Chandigarh ,also known as "The City Beautiful" is my current Indian home.
+
+I have studied Bachelors in Technology at Punjab Engineering College, Chandigarh. During the course of my degree, I discovered my passion for data and grabbed a job at ZS Associates as a Business Technology Solutions Associate. Post an amazing year at ZS Associates, I joined McKinsey and Company as a Junior analyst, and progressed to the role of an Analyst within a short span of 10 months. 
+
+I am currently reading for Masters in Analytics and Management at London Business School and am aiming to pursue a career in consulting post my course at LBS. 
+
+![Current Studying at London Business school](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg)
+
+In addition to my professional experience, I am an enthusiastic traveller and have been to over 25+ cities across 3 continents. My source of adrenal rush includes trying roller coasters around these cities and I have covered over 30+ roller coasters including the world’s fastest and steepest ones
+
+![](https://www.coaster101.com/wp-content/uploads/2010/05/ferrari.jpg)

@@ -84,7 +84,7 @@ params:
       - image: abt_me.jpeg
         subtitle: Learn more about me!
         title: About me
-        url: blogs/aliquam
+        url: blogs/About_me
         
       - image: cv.png
         subtitle: My academic and professional journey         
