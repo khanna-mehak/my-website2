@@ -45,9 +45,6 @@ library(scales)
 library(data.table)  
 ```
 
-
-# Youth Risk Behavior Surveillance
-
 ## Exploratory Data Analysis
 
 Using visualization and summary statistics, describe the distribution of weights. How many observations are we missing weights from? Use also the skim function.
