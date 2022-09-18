@@ -107,9 +107,9 @@ params:
         url: blogs/brexit
         
       - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
-        url: blogs/youth_behavior
+        subtitle: Analysis of youth behaviour
+        title: Youth Risk Behavior Surveillance 
+        url: blogs/youth
         
       - image: travel_1.JPG
         subtitle: A collection of my favourite Travel memories
