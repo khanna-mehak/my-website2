@@ -26,3 +26,9 @@ knitr::opts_chunk$set(
   fig.align = "center"
 )
 ```
+
+```{r travel_1, echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("static/img/blogs", "sf_2.jpeg"), error = FALSE)
+```
+
+<!-- ![]("static\img\blogs\sf_2.jpeg") -->
