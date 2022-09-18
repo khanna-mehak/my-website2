@@ -2,7 +2,7 @@
 title: "My Travel Diary"
 description: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
 slug: "travel"
-image: pic08.jpg
+image: travel_1.jpeg
 keywords: ""
 categories: 
     - ""
@@ -27,8 +27,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r travel_1, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("static/img/blogs", "sf_2.jpeg"), error = FALSE)
-```
+<!-- ![]("img/blogs/travel_1.jpeg") -->
 
-<!-- ![]("static\img\blogs\sf_2.jpeg") -->
+```{r travel_img, echo=FALSE, out.width="100%"}
+# knitr::include_graphics("static/img/blogs/travel_1.jpeg")
+knitr::include_graphics(here::here("static/img/blogs","sf_1.jpeg"))
+```
