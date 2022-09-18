@@ -1,0 +1,167 @@
+---
+title: "Brexit Poll Analysis"
+description: "This is an AM01 Applied statitics project undertaken by my study group to analyse the Brexit polls."
+slug: "brexit"
+image: brexit_5.jpeg
+keywords: ""
+categories: 
+    - ""
+    - ""
+date: 2017-10-31T21:28:43-05:00
+draft: false
+---
+
+
+
+<p>This is an AM01 Applied statitics project undertaken by my study group to analyse the Brexit polls. We have tried to visually study how the political affiliation translated to Brexit voting using the data provided. We have described the GDP components over time for 3 countries (Germany, Indian and United States). The breakdown of GDP at constant 2010 prices in USD has also been analysed and is depicted by plots in this project.</p>
+<div id="brexit-plot-how-political-affiliation-translated-to-brexit-voting" class="section level1">
+<h1>Brexit plot: How political affiliation translated to Brexit voting</h1>
+<p>Import the data:</p>
+<pre class="r"><code>brexit_results &lt;- read_csv(&quot;https://raw.githubusercontent.com/kostis-christodoulou/am01/master/data/brexit_results.csv&quot;)</code></pre>
+<pre class="r"><code># Concatenated colors in new variable
+
+parties_brexit_names &lt;- c(&quot;Conservative&quot;, &quot;Labour&quot;, &quot;Lib Dems&quot;, &quot;UKIP&quot;)
+colors_brexit &lt;- c(&quot;#0087dc&quot;, &quot;#d50000&quot;,&quot;#FDBB30&quot;,&quot;#EFE600&quot;)
+
+# Tidy long format
+
+tidyresults &lt;- brexit_results %&gt;% 
+  select(1:6) %&gt;% 
+  pivot_longer(cols = 2:5,
+               names_to = &quot;party&quot;,
+               values_to = &quot;percentage&quot;) 
+
+# Create scatterplot with regression lines
+
+ggplot(tidyresults, aes(x= percentage, y = leave_share, colour = party)) +
+  geom_point(alpha = 0.3, size = 1)+
+  geom_smooth(method=lm)+
+  labs(
+    title = &quot;How political affiliation translated to Brexit Voting&quot;,
+    y = &quot;Leave % in the 2016 Brexit referendum&quot;,
+    x = &quot;Party % in the UK 2015 general election&quot;
+  )+
+  theme_bw()+
+  ylim(20, 102)+
+  theme(legend.position=&quot;bottom&quot;,
+        legend.title = element_blank())+
+  theme(text = element_text(size = 7))+
+  scale_color_manual(values=colors_brexit,
+                    labels=parties_brexit_names)</code></pre>
+<p><img src="/blogs/blog1_files/figure-html/unnamed-chunk-2-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="gdp-components-over-time-and-among-countries" class="section level1">
+<h1>GDP components over time and among countries</h1>
+<pre class="r"><code>UN_GDP_data  &lt;-  read_excel(here::here(&quot;data&quot;, &quot;Download-GDPconstant-USD-countries.xls&quot;), # Excel filename
+                sheet=&quot;Download-GDPconstant-USD-countr&quot;, # Sheet name
+                skip=2) # Number of rows to skip</code></pre>
+<p>Tidy the data, use billions for high values and change to shorter variable names.</p>
+<pre class="r"><code># Pivot longer + Renaming indicators
+
+tidy_GDP_data  &lt;- UN_GDP_data %&gt;% 
+                      pivot_longer(cols = 4:51, names_to = &quot;Year&quot;) %&gt;% 
+                      mutate(value=value/(1e9),
+                             across(&#39;IndicatorName&#39;,str_replace,&quot;Exports of goods and services&quot;, &quot;Exports&quot;),
+                             across(&#39;IndicatorName&#39;,str_replace,&quot;Imports of goods and services&quot;, &quot;Imports&quot;),
+                             across(&#39;IndicatorName&#39;,str_replace,&quot;General government final consumption expenditure&quot;, &quot;Government expenditure&quot;),
+                             across(&#39;IndicatorName&#39;,str_replace,&quot;Household consumption expenditure \\(including Non-profit institutions serving households\\)&quot;, &quot;Household expenditure&quot;))
+
+# Let us compare GDP components for these 3 countries
+country_list &lt;- c(&quot;United States&quot;,&quot;India&quot;, &quot;Germany&quot;)
+indicator_list &lt;- c(&quot;Exports&quot;,&quot;Imports&quot;,&quot;Government expenditure&quot;,&quot;Household expenditure&quot;,&quot;Gross capital formation&quot;,&quot;Net Exports&quot;)</code></pre>
+<pre class="r"><code>#Creating line chart and setting colors due to different order
+
+tidy_GDP_data %&gt;% 
+    mutate(Year=as.integer(Year)) %&gt;% 
+    filter(Country %in% country_list, IndicatorName %in% indicator_list) %&gt;% 
+    ggplot(aes(Year,value,color=IndicatorName))+
+    geom_line(size=0.8)+
+    xlim(1970,2017)+
+    facet_wrap(~Country)+
+    labs(title = &quot;GDP components over time&quot;,
+       subtitle = &quot;In Constant 2010 USD&quot;,
+       x=NULL,
+       y=&quot;Billion US$&quot;,
+       color= &quot;Components of GDP&quot;)+
+    #scale_color_discrete(name = &quot;Components of GDP&quot;)+
+   # theme(legend.title = &quot;Components of GDP&quot;)+
+    scale_color_manual(values = c(&quot;#A3A500&quot;,
+                                  &quot;#00BF7D&quot;,
+                                  &quot;#F8766D&quot;,
+                                  &quot;#2FBEF7&quot;,
+                                  &quot;#EA7DF4&quot;))+
+  theme_bw()+
+  theme(panel.grid.minor.x = element_blank())+
+  theme(text = element_text(size = 7))</code></pre>
+<p><img src="/blogs/blog1_files/figure-html/gdp1_self-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="gdp-and-its-breakdown-at-constant-2010-prices-in-us-dollars" class="section level1">
+<h1>GDP and its breakdown at constant 2010 prices in US Dollars</h1>
+<pre class="r"><code># Going back to wider to easily calculate columns
+
+tidy_GDP_data %&gt;% 
+    mutate(Year=as.integer(Year)) %&gt;% 
+    filter(Country %in% country_list, IndicatorName %in% indicator_list) %&gt;% 
+    select(Country,IndicatorName,Year,value) %&gt;% 
+    pivot_wider(names_from = IndicatorName,values_from = value) %&gt;% 
+    clean_names() %&gt;%   
+    mutate(net_export=(exports-imports),
+           GDP=(household_expenditure+ government_expenditure+gross_capital_formation+net_export),
+           &quot;Household expenditure&quot;=household_expenditure/GDP,
+           &quot;Government expenditure&quot;=government_expenditure/GDP,
+           &quot;Gross capital formation&quot;=gross_capital_formation/GDP,
+           &quot;Net Exports&quot;=net_export/GDP)%&gt;% 
+    pivot_longer(cols=3:13,names_to = &quot;IndicatorName&quot;) %&gt;% 
+    filter(IndicatorName %in% indicator_list) %&gt;% 
+    ggplot(aes(year,value,color=IndicatorName,group=IndicatorName))+
+    geom_line(size=0.8)+
+    xlim(1970,2017)+
+    facet_wrap(~country)+
+    labs(title = &quot;GDP and its breakdown at constant 2010 prices in US Dollars&quot;,
+       x=NULL,
+       y=&quot;proportion&quot;,
+       caption = &quot;Source: United Nations, https://unstats.un.org/unsd/snaama/Downloads&quot;)+
+     scale_color_discrete(name = NULL)+
+    theme_bw() +
+    theme(panel.grid.minor.x = element_blank())+
+    scale_y_continuous(labels = scales::percent)+
+    theme(text = element_text(size = 7))</code></pre>
+<p><img src="/blogs/blog1_files/figure-html/gdp2_self-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="what-is-this-last-chart-telling-you-can-you-explain-in-a-couple-of-paragraphs-the-different-dynamic-among-these-three-countries" class="section level2">
+<h2>What is this last chart telling you? Can you explain in a couple of paragraphs the different dynamic among these three countries?</h2>
+<p>The last chart potrays that Household expendiure has been the major contributor to GDP since 1970 in all the three countries, while net exports contributes the least.<br />
+</p>
+<p>While in Germany and the United States Gross Capital Formation and Government Expenditure have been almost overlapping, in India, Gross Capital Formation has been evidently higher than the Government Expenditure.<br />
+</p>
+<p>It is also interesting to note that in India, the proportion of contribution of Household Expenditure has been consistently falling while that of Gross Capital Formation has been increasing.</p>
+</div>
+<div id="what-is-the-difference-between-what-you-calculated-as-gdp-and-the-gdp-figure-included-in-the-dataframe" class="section level2">
+<h2>What is the % difference between what you calculated as GDP and the GDP figure included in the dataframe?</h2>
+<pre class="r"><code># Add column for self-made GDP and add column for percentage difference 
+
+GDP_cal&lt;- tidy_GDP_data %&gt;% 
+    mutate(Year=as.integer(Year)) %&gt;% 
+    filter(Country %in% country_list) %&gt;% 
+    pivot_wider(names_from = IndicatorName,values_from = value) %&gt;% 
+    clean_names() %&gt;%   
+    mutate(net_export=(exports-imports),
+           GDP=(household_expenditure+ government_expenditure+gross_capital_formation+net_export),
+           gdp_difference=(GDP-gross_domestic_product_gdp)/(GDP))
+
+# Plot it
+ 
+ GDP_cal%&gt;% ggplot(aes(x=year, y=gdp_difference))+
+           geom_path()+
+          geom_point(size=0.01)+
+          facet_wrap(~country)+
+          scale_y_continuous(labels = scales::percent)+
+          labs(x=&quot;Year&quot;,
+               y=&quot;Difference in GDP&quot;,
+               title = &quot;% difference in given GDP and calculated GDP&quot; )+
+          theme_bw()+
+          theme(panel.grid.minor.x =element_blank())</code></pre>
+<p><img src="/blogs/blog1_files/figure-html/gdp_self_made-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><strong>Answer:</strong><br />
+It is interesting to note that since 2000, especially for Germany and US the value calculated by formula almost exactly matches the official GDP.</p>
+</div>
+</div>

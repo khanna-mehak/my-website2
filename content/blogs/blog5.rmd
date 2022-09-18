@@ -1,0 +1,28 @@
+---
+title: "Project: Stock Analysis"
+description: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
+slug: "other"
+image: pic08.jpg
+keywords: ""
+categories: 
+    - ""
+    - ""
+date: 2017-10-31T22:26:13-05:00
+draft: false
+---
+
+```{r, setup, echo=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3, scipen = 999)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=9, 
+  fig.height=5,  #6.75 was original
+  fig.align = "center"
+)
+```

@@ -1,0 +1,265 @@
+---
+title: "Stock Analysis"
+description: "This is an AM01 Applied statistics project undertaken by my study group to returns of few financial stocks."
+slug: "stocks"
+image: stocks_2.png
+keywords: ""
+categories: 
+    - ""
+    - ""
+date: 2017-10-31T22:26:13-05:00
+draft: false
+---
+
+
+
+<p>This is an AM01 Applied statistics project undertaken by my study group to returns of few financial stocks. We have extracted and plotted the data for companies per sector from the given data set. Monthly summary of returns from each stock is calculated in our analysis. Risk analysis of stocks has been done based on the data provided to understand the risk involved in the stocks under analysis.</p>
+<div id="returns-of-financial-stocks" class="section level1">
+<h1>Returns of financial stocks</h1>
+<pre class="r"><code># read data from dataset
+
+nyse &lt;- read_csv(here::here(&quot;data&quot;,&quot;nyse.csv&quot;))</code></pre>
+<div id="visualisation-of-number-of-companies-per-sector-based-on-the-dataset" class="section level2">
+<h2>Visualisation of number of companies per sector based on the dataset</h2>
+<pre class="r"><code>nyse_sectors &lt;- nyse %&gt;% 
+  count(sector, sort=TRUE) %&gt;% 
+  mutate(sector = fct_reorder(sector, n))
+
+kable(nyse_sectors, caption = &quot;Number of Companies per Sector&quot;)</code></pre>
+<table>
+<caption>(#tab:companies_per_sector)Number of Companies per Sector</caption>
+<thead>
+<tr class="header">
+<th align="left">sector</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Finance</td>
+<td align="right">97</td>
+</tr>
+<tr class="even">
+<td align="left">Consumer Services</td>
+<td align="right">79</td>
+</tr>
+<tr class="odd">
+<td align="left">Public Utilities</td>
+<td align="right">60</td>
+</tr>
+<tr class="even">
+<td align="left">Capital Goods</td>
+<td align="right">45</td>
+</tr>
+<tr class="odd">
+<td align="left">Health Care</td>
+<td align="right">45</td>
+</tr>
+<tr class="even">
+<td align="left">Energy</td>
+<td align="right">42</td>
+</tr>
+<tr class="odd">
+<td align="left">Technology</td>
+<td align="right">40</td>
+</tr>
+<tr class="even">
+<td align="left">Basic Industries</td>
+<td align="right">39</td>
+</tr>
+<tr class="odd">
+<td align="left">Consumer Non-Durables</td>
+<td align="right">31</td>
+</tr>
+<tr class="even">
+<td align="left">Miscellaneous</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">Transportation</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="left">Consumer Durables</td>
+<td align="right">8</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>ggplot(nyse_sectors, aes(x = n, y = sector)) +
+  geom_col(fill = &quot;#CB454A&quot;) + 
+  labs(
+    title =&quot;Number of Companies per Sector&quot;, 
+    x=&quot;number of companies&quot;,
+    y=&quot;sectors&quot;,
+    caption = &quot;Kostis Christodoulou (2022) Finance Data&quot;
+     )</code></pre>
+<p><img src="/blogs/blog3_files/figure-html/companies_per_sector-1.png" width="864" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Notice the cache=TRUE argument inthe chunk options. Because getting data is time consuming, 
+# cache=TRUE means that once it downloads data, the chunk will not run again next time you knit your Rmd
+
+myStocks &lt;- c(&quot;AAPL&quot;, &quot;JPM&quot;, &quot;DIS&quot;,&quot;DPZ&quot;,&quot;ANF&quot;,&quot;TSLA&quot;,&quot;SPY&quot; ) %&gt;%
+  tq_get(get  = &quot;stock.prices&quot;,
+         from = &quot;2011-01-01&quot;,
+         to   = &quot;2022-08-31&quot;) %&gt;%
+  group_by(symbol) 
+
+glimpse(myStocks) # examine the structure of the resulting data frame</code></pre>
+<pre><code>## Rows: 20,545
+## Columns: 8
+## Groups: symbol [7]
+## $ symbol   &lt;chr&gt; &quot;AAPL&quot;, &quot;AAPL&quot;, &quot;AAPL&quot;, &quot;AAPL&quot;, &quot;AAPL&quot;, &quot;AAPL&quot;, &quot;AAPL&quot;, &quot;AAPL…
+## $ date     &lt;date&gt; 2011-01-03, 2011-01-04, 2011-01-05, 2011-01-06, 2011-01-07, …
+## $ open     &lt;dbl&gt; 11.6, 11.9, 11.8, 12.0, 11.9, 12.1, 12.3, 12.3, 12.3, 12.4, 1…
+## $ high     &lt;dbl&gt; 11.8, 11.9, 11.9, 12.0, 12.0, 12.3, 12.3, 12.3, 12.4, 12.4, 1…
+## $ low      &lt;dbl&gt; 11.6, 11.7, 11.8, 11.9, 11.9, 12.0, 12.1, 12.2, 12.3, 12.3, 1…
+## $ close    &lt;dbl&gt; 11.8, 11.8, 11.9, 11.9, 12.0, 12.2, 12.2, 12.3, 12.3, 12.4, 1…
+## $ volume   &lt;dbl&gt; 445138400, 309080800, 255519600, 300428800, 311931200, 448560…
+## $ adjusted &lt;dbl&gt; 10.05, 10.10, 10.18, 10.18, 10.25, 10.44, 10.42, 10.50, 10.54…</code></pre>
+<pre class="r"><code>#calculate daily returns
+myStocks_returns_daily &lt;- myStocks %&gt;%
+  tq_transmute(select     = adjusted, 
+               mutate_fun = periodReturn, 
+               period     = &quot;daily&quot;, 
+               type       = &quot;log&quot;,
+               col_rename = &quot;daily_returns&quot;,
+               cols = c(nested.col)) 
+
+#calculate monthly  returns
+myStocks_returns_monthly &lt;- myStocks %&gt;%
+  tq_transmute(select     = adjusted, 
+               mutate_fun = periodReturn, 
+               period     = &quot;monthly&quot;, 
+               type       = &quot;arithmetic&quot;,
+               col_rename = &quot;monthly_returns&quot;,
+               cols = c(nested.col)) 
+
+#calculate yearly returns
+myStocks_returns_annual &lt;- myStocks %&gt;%
+  #group_by(symbol) %&gt;%
+  tq_transmute(select     = adjusted, 
+               mutate_fun = periodReturn, 
+               period     = &quot;yearly&quot;, 
+               type       = &quot;arithmetic&quot;,
+               col_rename = &quot;yearly_returns&quot;,
+               cols = c(nested.col))</code></pre>
+</div>
+<div id="summary-of-monthly-returns-for-each-of-the-stocks-and-spy" class="section level2">
+<h2>Summary of monthly returns for each of the stocks and <code>SPY</code></h2>
+<pre class="r"><code>kable(myStocks_returns_monthly %&gt;% 
+  group_by(symbol) %&gt;% 
+  summarize(min_return = min(monthly_returns), max_return = max(monthly_returns), median_return = median(monthly_returns), mean_return = mean(monthly_returns), sd_return = sd(monthly_returns)), caption = &quot;Monthly Returns for Stocks&quot;)</code></pre>
+<table>
+<caption>(#tab:summarise_monthly_returns)Monthly Returns for Stocks</caption>
+<thead>
+<tr class="header">
+<th align="left">symbol</th>
+<th align="right">min_return</th>
+<th align="right">max_return</th>
+<th align="right">median_return</th>
+<th align="right">mean_return</th>
+<th align="right">sd_return</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">AAPL</td>
+<td align="right">-0.181</td>
+<td align="right">0.217</td>
+<td align="right">0.023</td>
+<td align="right">0.023</td>
+<td align="right">0.079</td>
+</tr>
+<tr class="even">
+<td align="left">ANF</td>
+<td align="right">-0.421</td>
+<td align="right">0.507</td>
+<td align="right">0.001</td>
+<td align="right">0.003</td>
+<td align="right">0.146</td>
+</tr>
+<tr class="odd">
+<td align="left">DIS</td>
+<td align="right">-0.186</td>
+<td align="right">0.234</td>
+<td align="right">0.007</td>
+<td align="right">0.011</td>
+<td align="right">0.072</td>
+</tr>
+<tr class="even">
+<td align="left">DPZ</td>
+<td align="right">-0.194</td>
+<td align="right">0.342</td>
+<td align="right">0.025</td>
+<td align="right">0.027</td>
+<td align="right">0.077</td>
+</tr>
+<tr class="odd">
+<td align="left">JPM</td>
+<td align="right">-0.229</td>
+<td align="right">0.202</td>
+<td align="right">0.020</td>
+<td align="right">0.012</td>
+<td align="right">0.073</td>
+</tr>
+<tr class="even">
+<td align="left">SPY</td>
+<td align="right">-0.125</td>
+<td align="right">0.127</td>
+<td align="right">0.015</td>
+<td align="right">0.011</td>
+<td align="right">0.040</td>
+</tr>
+<tr class="odd">
+<td align="left">TSLA</td>
+<td align="right">-0.224</td>
+<td align="right">0.811</td>
+<td align="right">0.012</td>
+<td align="right">0.050</td>
+<td align="right">0.177</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="density-plot-for-all-the-stocks" class="section level2">
+<h2>Density plot for all the stocks</h2>
+<pre class="r"><code>ggplot(myStocks_returns_monthly, aes(x=monthly_returns)) +
+  geom_density() +
+  facet_wrap(~symbol) + 
+  labs(
+    title =&quot;Density plot of monthly returns for each stock&quot;, 
+    x=&quot;monthly returns&quot;,
+    y=&quot;density&quot;,
+    caption = &quot;Kostis Christodoulou (2022) Finance Data&quot;
+     )</code></pre>
+<p><img src="/blogs/blog3_files/figure-html/density_monthly_returns-1.png" width="864" style="display: block; margin: auto;" /></p>
+</div>
+<div id="inference" class="section level2">
+<h2>Inference</h2>
+</div>
+</div>
+<div id="analysis-of-risk-involved-in-the-stocks-that-are-analysed" class="section level1">
+<h1>Analysis of risk involved in the stocks that are analysed</h1>
+<p>This density plot shows the distribution of the companies’ monthly returns. A broad curve with greater spread means that we have a large variance in outcome and thus higher risk. Therefore, it appears that Tesla is the riskiest asset in our portfolio as it has a very large spread of monthly returns and the maximum density of a possible return value is below 3. As a tech company, Tesla faces great business uncertainties (e.g. technologicla breakthroughs). SP500 ETF is the least risky one, as a “spike” is shown in the diagram, its monthly returns are very concentrated, reaching the density above 12. Meanwhile its spread is very narrow. This is because the stock is an index ETF which is made up by the selected index stocks in the market and generally reflects the risk of the entire stock market across multiple industries which diversifies the risk.</p>
+<div id="visual-depiction-of-expected-monthly-return-mean-of-a-stock-and-the-risk-standard-deviation-all-each-stock" class="section level2">
+<h2>Visual depiction of expected monthly return (mean) of a stock and the risk (standard deviation) all each stock</h2>
+<pre class="r"><code>mean_sd_return &lt;- myStocks_returns_monthly %&gt;% 
+  group_by(symbol) %&gt;% 
+  summarize(mean_return = mean(monthly_returns), sd_return = sd(monthly_returns))
+
+ggplot(mean_sd_return, aes(x=sd_return, y = mean_return, label=symbol))+
+  geom_point(shape=23, fill=&quot;black&quot;) +
+  geom_text_repel(fontface = &quot;bold&quot;) +
+  labs(
+    title = &quot;return vs risk of stocks&quot;, 
+    x=&quot;standard deviation of monthly return&quot;,
+    y=&quot;mean of monthly return&quot;,
+    caption = &quot;Kostis Christodoulou (2022) Finance Data&quot;
+  ) </code></pre>
+<p><img src="/blogs/blog3_files/figure-html/risk_return_plot-1.png" width="864" style="display: block; margin: auto;" /></p>
+</div>
+<div id="what-can-you-infer-from-this-plot-are-there-any-stocks-which-while-being-riskier-do-not-have-a-higher-expected-return" class="section level2">
+<h2>What can you infer from this plot? Are there any stocks which, while being riskier, do not have a higher expected return?</h2>
+<p><strong>Answer:</strong>
+Standard deviation can be used to show the volatility of the stocks, and therefore the risks beared by the investors. Most companies’ stocks follow the rule of “risk vs return”, which means that those with higher risks should generate higher returns to compensate. For examples, S&amp;P 500 ETF generates less risk for less return whearas Tesla generates extremely high return for high risk. Other stocks similarly follow this rule. However, Abercrombie &amp; Fitch is risky but still provides low returns. This poor performance aligns with the bad news on the company over the recent years, including the declining sales from 2020 to 2022, scandals of discriminatory hiring practices, store closure etc.</p>
+</div>
+</div>

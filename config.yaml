@@ -6,17 +6,18 @@ googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
-    buttonText: Get Started
+    buttonText: Get To Know Me
     subtitle: |-
-      A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-      AND RELEASED UNDER THE CREATIVE COMMONS.
-    title: Hi, my name is Mehak
+      Currently reading for Masters in Analytics & Management (MAM) at London Business School.
+      
+      THIS IS MY PORTFOLIO WEBSITE for AM01 Applied Statistics.
+    title: Hi, I am  Mehak Khanna
   blog: {}
   contact:
     address:
       - city: London
         country: UK
-        street: Regent's Park
+        street: Burton Street
         title: Address
     buttonClear: Clear
     buttonSend: Send message
@@ -37,25 +38,25 @@ params:
     copyright: Mehak
     enable: yes
     quicklinks:
-      - alt: HTML5 UP
-        text: 'Design: '
-        url: https://www.html5up.net
+      # - alt: HTML5 UP
+      #   text: 'Design: '
+      #   url: https://www.html5up.net
     social:
       - icon: fa-twitter
         label: Twitter
         url: https://twitter.com/khannamehak18
-#      - icon: fa-facebook
-#        label: Facebook
-#        url: https://www.facebook.com
+      # - icon: fa-facebook
+      #  label: Facebook
+      #  url: https://www.facebook.com/mehak.khanna.106
       - icon: fa-instagram
         label: Instagram
-        url: https://www.instagram.com
+        url: https://www.instagram.com/mehak___khanna
       - icon: fa-github
         label: GitHub
-        url: https://www.github.com
+        url: https://github.com/khanna-mehak
       - icon: fa-linkedin
         label: LinkedIn
-        url: https://www.linkedin.com
+        url: https://www.linkedin.com/in/khanna-mehak
   image: ''
   name: Mehak Khanna
   navigation:
@@ -80,30 +81,35 @@ params:
   tiles:
     enable: yes
     showcase:
-      - image: backround_sunset.jpg
-        subtitle: I love sunsets
+      - image: abt_me.jpeg
+        subtitle: Learn more about me!
         title: About me
         url: blogs/aliquam
-      - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Tempus
-        url: blogs/tempus
-      - image: pic03.jpg
-        subtitle: Lorem Etiam Nullam
-        title: Magna
-        url: blogs/magna
-      - image: pic04.jpg
-        subtitle: Nisl Sed Aliquam
-        title: Ipsum
-        url: blogs/ipsum
+        
+      - image: stock_analysis.jpeg
+        subtitle: Stock Analsis project 
+        title: Stock Analysis
+        url: blogs/stocks
+        
+      - image: san_fransisco.jpeg
+        subtitle: In-depth analysis of rents across Bay area 
+        title: San Fransisco Rent Analysis
+        url: blogs/sf_rent
+        
+      - image: brexit.jpeg
+        subtitle: A vote analysis study for Brexit
+        title: Brexit Poll Analysis
+        url: blogs/brexit
+        
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Consequat
         url: blogs/ipsum
-      - image: pic06.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Etiam
-        url: blogs/ipsum
+        
+      - image: travel_1.JPG
+        subtitle: A collection of my favourite Travel memories
+        title: My Travel Stories
+        url: blogs/travel
   two:
     buttonText: Get Started
     enable: yes
