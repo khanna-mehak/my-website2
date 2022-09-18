@@ -10,30 +10,41 @@ categories:
 date: 2017-10-31T22:42:51-05:00
 draft: false
 ---
+```{r load-libraries, echo=FALSE}
+library(patchwork)  
+library(magick)
+library(ggplot2)
+library(gridExtra)
+
+```
 # My early life
-![](https://images.hindustantimes.com/img/2022/08/05/550x309/deb21a54-1506-11ed-865b-9917e61c1d8b_1659735675778.jpg){width=100%}
+
+
+![](https://images.hindustantimes.com/img/2022/08/05/550x309/deb21a54-1506-11ed-865b-9917e61c1d8b_1659735675778.jpg)
+
 Hello, I am Mehak Khanna. I was born and raised in India. I currently live in London, United Kingdom. I have lived across various cities in North and Western parts of India including Amritsar, Ahmedabad, Mumbai. Chandigarh ,also known as "The City Beautiful" is my current Indian home.
 
-![](https://media.istockphoto.com/photos/army-of-statuettes-in-chandigarh-picture-id471757663?k=20&m=471757663&s=612x612&w=0&h=7rO1MgDlcbFq0VwR-SHgACruqq4ovDHrGdpKCxWzm9M=){width=100%}
+![My favorite spot in Chandigarh: Rock Garden](https://media.istockphoto.com/photos/army-of-statuettes-in-chandigarh-picture-id471757663?k=20&m=471757663&s=612x612&w=0&h=7rO1MgDlcbFq0VwR-SHgACruqq4ovDHrGdpKCxWzm9M=){width=100%}
 
 
 #Education
 
 I have studied Bachelors in Technology at Punjab Engineering College, Chandigarh. During the course of my degree, I discovered my passion for data and grabbed a job at ZS Associates as a Business Technology Solutions Associate. Post an amazing year at ZS Associates, I joined McKinsey and Company as a Junior analyst, and progressed to the role of an Analyst within a short span of 10 months. 
 
-![](https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/11/08/Pictures/chandigarh-helicopter-hindustan-chandigarh-helicopter-administrator-engineering_96e26630-21dc-11eb-8734-93f916536cd4.jpg){width=100%}
+![Attraction at PEC Chandigarh: Air Force Helicoptor](https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/11/08/Pictures/chandigarh-helicopter-hindustan-chandigarh-helicopter-administrator-engineering_96e26630-21dc-11eb-8734-93f916536cd4.jpg){width=100%}
 
 I am currently reading for Masters in Analytics and Management at London Business School and am aiming to pursue a career in consulting post my course at LBS.  
 
 ![My Favorite spot at London Business school](https://www.london.ac.uk/sites/default/files/styles/promo_mobile/public/2017-10/london-business-school-Campus.jpg?itok=o-y3e-qT){width=100%}
 
 #Professional experiences 
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfp2-v0_mvOp5W9vUBpNKVMH4A-3M7oRidg&usqp=CAU){width=100%}
 
 During the course of my degree, I discovered my passion for data and grabbed a job at ZS Associates as a Business Technology Solutions Associate. Post an amazing year at ZS Associates, I joined McKinsey and Company as a Junior analyst, and progressed to the role of an Analyst within a short span of 10 months. 
 
 My experience of working with McKinsey & Company and ZS Associates has led to my evolution as a critical thinker, collaborative and curious individual. Working in a dynamic environment has nurtured my appetite for risk-taking, ability to deal with complex indeterminate problems and navigate through ambiguity un-flustered. As a technology analyst at ZS Associates, I worked on projects ranging from process optimization, technology transformation and designing growth strategies for clients across pharmaceutical and healthcare industry. As an Analyst at McKinsey and Company, I worked on pricing analytics (growth strategy, forecasting) to uncover consumer behaviour and curate marketing strategies for clients.
 
-![]()
+![](https://www.businessbecause.com/uploads/default/news/images/b069d0845c7c19cd.png){width=100%}
 #Interests
 
 In addition to my professional experience, I am an enthusiastic traveller and have been to over 25+ cities across 3 continents. My source of adrenal rush includes trying roller coasters around these cities and I have covered over 30+ roller coasters including the world’s fastest and steepest ones
