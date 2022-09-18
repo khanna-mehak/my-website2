@@ -86,6 +86,11 @@ params:
         title: About me
         url: blogs/aliquam
         
+      - image: cv.png
+        subtitle: My academic and professional journey         
+        title: My CV
+        url: docs/CV.pdf  
+        
       - image: stock_analysis.jpeg
         subtitle: Stock Analsis project 
         title: Stock Analysis
@@ -101,20 +106,17 @@ params:
         title: Brexit Poll Analysis
         url: blogs/brexit
         
-      - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
-        url: blogs/ipsum
+      # - image: pic05.jpg
+      #   subtitle: Ipsum Dolor Sit Amet
+      #   title: Consequat
+      #   url: blogs/ipsum
         
       - image: travel_1.JPG
         subtitle: A collection of my favourite Travel memories
         title: My Travel Stories
         url: blogs/travel
         
-      - image: a gorgeous_image.jpg
-        subtitle: Resume          
-        title: My CV
-        url: docs/CV.pdf
+     
   two:
     buttonText: Get Started
     enable: yes
