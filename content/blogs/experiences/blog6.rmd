@@ -27,7 +27,34 @@ knitr::opts_chunk$set(
 )
 ```
 
-![Spain](/blogs/blog6_files/travel_2.JPG)
+![Spain](/blogs/blog6_files/travel_2.JPG){width=100%}
 
-![Switzerland](/blogs/blog6_files/travel_3.JPG)
+![Switzerland](/blogs/blog6_files/travel_3.JPG){width=100%}
 
+![](/blogs/blog6_files/travel_4.jpg){width=100%}
+
+![](/blogs/blog6_files/travel_5.jpeg){width=100%}
+
+![](/blogs/blog6_files/travel_6.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_7.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_8.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_9.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_10.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_11.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_12.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_13.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_14.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_15.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_16.JPG){width=100%}
+
+![](/blogs/blog6_files/travel_17.jpeg){width=100%}
