@@ -36,10 +36,13 @@ knitr::opts_chunk$set(
 ## _United States of America: 2018_
 
 ![Paragliding in Virginia Beach](/blogs/blog6_files/travel_4.jpg){width=100%}
+
 ## _My Favourite city: NEW YORK_ 
 
 ![New York City](/blogs/blog6_files/travel_5.jpeg){width=100%}
+
 ![New York City](/blogs/blog6_files/travel_17.jpeg){width=100%}
+
 
 ## _France: 2017_
 
