@@ -45,15 +45,19 @@ params:
       - icon: fa-twitter
         label: Twitter
         url: https://twitter.com/khannamehak18
+        
       # - icon: fa-facebook
       #  label: Facebook
       #  url: https://www.facebook.com/mehak.khanna.106
+      
       - icon: fa-instagram
         label: Instagram
         url: https://www.instagram.com/mehak___khanna
+        
       - icon: fa-github
         label: GitHub
         url: https://github.com/khanna-mehak
+        
       - icon: fa-linkedin
         label: LinkedIn
         url: https://www.linkedin.com/in/khanna-mehak
@@ -63,18 +67,23 @@ params:
     button1:
       - name: Get Started
         url: blogs
+        
     button2:
       - name: Log In
         url: '#'
+        
     links:
       - name: Home
         url: '#'
+        
       - name: Blogs
         url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+        
+      # - name: Generic Blog
+      #   url: blogs/ipsum
+      #   
+      # - name: Elements
+      #   url: elements.html
     menu: Menu
     subtitle: 
     title: Mehak's portfolio website
