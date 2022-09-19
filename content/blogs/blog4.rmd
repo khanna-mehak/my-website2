@@ -13,7 +13,7 @@ draft: false
 # My Childhood
 
 
-![](https://images.hindustantimes.com/img/2022/08/05/550x309/deb21a54-1506-11ed-865b-9917e61c1d8b_1659735675778.jpg)
+![](https://images.hindustantimes.com/img/2022/08/05/550x309/deb21a54-1506-11ed-865b-9917e61c1d8b_1659735675778.jpg){width=100%}
 
 Hello, I am Mehak Khanna. I was born and raised in India. I currently live in London, United Kingdom. I have lived across various cities in North and Western parts of India including Amritsar, Ahmedabad, Mumbai. Chandigarh ,also known as "The City Beautiful" is my current Indian home.
 

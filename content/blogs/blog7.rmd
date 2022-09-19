@@ -2,7 +2,7 @@
 title: "Pay Discrimination Analysis"
 description: "This is an AM01 Applied statitics project undertaken by my study group to analyse the"
 slug: "pay_disc"
-image: travel_1.jpeg
+image: gender_1.jpeg
 keywords: ""
 categories: 
     - ""
