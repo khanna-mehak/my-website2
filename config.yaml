@@ -96,7 +96,7 @@ params:
       - image: abt_me.jpeg
         subtitle: Learn more about me!
         title: About me
-        url: blogs/About_me
+        url: blogs/experiences/About_me
         
       - image: cv.png
         subtitle: My academic and professional journey         
@@ -131,7 +131,7 @@ params:
       - image: travel_1.JPG
         subtitle: A collection of my favourite Travel memories
         title: My Travel Stories
-        url: blogs/travel
+        url: blogs/experiences/travel
         
      
   two:
