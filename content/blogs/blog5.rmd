@@ -1,6 +1,6 @@
 ---
-title: "Youth Risk Behavior Surveillance"
-description: "This is an AM01 Applied statitics project undertaken by my study group to analyse the youth risk behavior surveillance"
+title: "Health pattern analysis"
+description: "This is an AM01 Applied statitics project undertaken by my study group to analyse the youth risk behavior surveillance data to study health pattern among high school students"
 slug: "youth"
 image: youth.jpeg
 keywords: ""
@@ -10,6 +10,8 @@ categories:
 date: 2017-10-31T22:26:13-05:00
 draft: false
 ---
+
+This is an AM01 Applied statitics project undertaken by my study group to analyse the Youth Risk Behavior Surveillance data to study health pattern among high school students. We have performed EDA on YRBSS data to gain insights on the weight data available for high school students. We have also done analysis of physically active people in addition to determining confidence interval for inactive students.We have also plotted graphs to understand the relationship between physical activity and weight among the students.
 
 ```{r, setup, echo=FALSE}
 knitr::opts_chunk$set(
@@ -43,11 +45,13 @@ library(openintro)
 library(knitr)
 library(scales)                         
 library(data.table)  
+
 ```
+# About: Youth Risk Behavior Surveillance
 
-## Exploratory Data Analysis
+Every two years, the Centers for Disease Control and Prevention conduct the [Youth Risk Behavior Surveillance System (YRBSS)](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) survey, where it takes data from high schoolers (9th through 12th grade), to analyze health patterns. You will work with a selected group of variables from a random sample of observations during one of the years the YRBSS was conducted.
 
-Using visualization and summary statistics, describe the distribution of weights. How many observations are we missing weights from? Use also the skim function.
+## Exploratory Data Analysis on distribution of weight data
 
 ```{r, eda_on_weight}
 
@@ -60,7 +64,7 @@ skimr::skim(yrbss)
 # Plot missing values
 kable(yrbss%>%
   filter(is.na(weight))%>%
-  summarise(Toatal_missing_data=n()),"simple")
+  summarise(Tatal_missing_data=n()),"simple")
 
 # Create histogram
 x <- yrbss$weight 
@@ -75,13 +79,11 @@ lines(xfit, yfit, col="red", lwd=2)
 
 
 ```
-**Answer:**\
+Inference:
 
 The minimum value of weight is 30, the maximum value is 181, the median is 64, the lower quantile is 56, the upper quantile is 76, and the total number of missing values is 1004. The distribution of weights looks lightly skewed to the right. We added a normal distribution line as comparison.\
 
-
-
-Let’s create a new variable in the dataframe `yrbss`, called `physical_3plus` , which will be `yes` if they are physically active for at least 3 days a week, and `no` otherwise. Use the `count()` function and see if you get the same results as `group_by()... summarise()`. Also plot your data.
+# Analysis of physically active people (>3 days a week):
   
 ```{r, mutate_and_count}
 
@@ -112,14 +114,12 @@ ggplot(aes(x=physical_3plus,y=number))+
   theme_bw()
 
 ```
-**Answer:**\
+Inference:
 
 In this first analysis we have separately shown the percentage proportion also for the NA values. 8906 kids practice sport 3plus times a week while 4404 do not. In the graph we have not included the NA values.
 
 
-## Confidence Interval for Proportion 3plus
-
-Can you provide a 95% confidence interval for the population proportion of high schools that are *NOT* active 3 or more days per week?
+## Confidence Interval calculation for the population proportion of high schools that are *NOT* active 3 or more days per week
 
 ```{r, confidence_interval}
 
@@ -169,14 +169,9 @@ kable(percentile_ci,
 
 ```
 
-
-**Answer:**\
-
 The 95% confidence interval is [0.323,0.339] calculated with both, formula and bootstrap.
 
-## Boxplot 3plus
-  
-Make a boxplot of `physical_3plus` vs. `weight`. Is there a relationship between these two variables? What did you expect and why?
+## Determining the relationship between physical_3plus` and `weight`
 
 ```{r, boxplot}
 
@@ -191,16 +186,12 @@ ggplot(aes(x=physical_3plus,y=weight))+
   theme_bw()
 
 ```
-
-**Answer:**\
+Inference:
 
 Although almost similiar, there is a positive relationship between being physically active for at least 3 days a week and weight. The result is somehow counter-intuitive, since we thought that more exercise in children would reduce there weight. This might be explained by the reason that people who stay highly active take part of physically demanding sports like basket, football and similiar and have thus a higher percentage of muscle or are just bigger. One additional reason could be that kids who are slightly heavier are more incentivised to exercise more frequently.
 
 
-## Confidence Interval Weight by Formula
-
-Calculate the mean, SD, etc. weight in these groups using the mean function, we must ignore any missing values by setting the `na.rm = TRUE`and define confidence interval.
-
+## Summary statistics for weight & confidence interval 
 
 ```{r, ci_using_formulas}
 
@@ -222,4 +213,4 @@ kable(ci_yrbss_weight)
 
 ```
 
-There is an observed mean difference of about 1.77kg (68.44 - 66.67), and we notice that the two confidence intervals do not overlap. It seems that the difference is statistically significant at 95% confidence. Let us however also conduct a hypothesis test.
+There is an observed mean difference of about 1.77kg (68.44 - 66.67), and we notice that the two confidence intervals do not overlap. It seems that the difference is statistically significant at 95% confidence. 

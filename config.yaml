@@ -116,8 +116,8 @@ params:
         url: blogs/brexit
         
       - image: youth.png
-        subtitle: Analysis of youth behaviour
-        title: Youth Risk Behavior Surveillance 
+        subtitle: Study of health pattern among high school students
+        title: Health pattern analysis 
         url: blogs/youth
         
       - image: gender.jpeg
