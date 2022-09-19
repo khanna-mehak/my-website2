@@ -79,6 +79,9 @@ params:
       - name: Projects
         url: blogs
         
+      - name: Resume
+        url: docs/CV.pdf 
+        
       # - name: Generic Blog
       #   url: blogs/ipsum
       #   
