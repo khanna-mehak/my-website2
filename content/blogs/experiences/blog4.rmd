@@ -12,7 +12,6 @@ draft: false
 ---
 # My Childhood
 
-
 Hello, I am Mehak Khanna. I was born and raised in India. I currently live in London, United Kingdom. I have lived across various cities in North and Western parts of India including Amritsar, Ahmedabad, Mumbai. Chandigarh, also known as "The City Beautiful" is my current Indian home.
 
 ![](https://images.hindustantimes.com/img/2022/08/05/550x309/deb21a54-1506-11ed-865b-9917e61c1d8b_1659735675778.jpg){width=100%}
@@ -34,6 +33,7 @@ I am currently reading for Masters in Analytics and Management at London Busines
 ![My Favorite spot at London Business school](https://www.london.ac.uk/sites/default/files/styles/promo_mobile/public/2017-10/london-business-school-Campus.jpg?itok=o-y3e-qT){width=100%}
 
 # Professional experiences 
+  
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfp2-v0_mvOp5W9vUBpNKVMH4A-3M7oRidg&usqp=CAU){width=100%}
 
 During the course of my degree, I discovered my passion for data and grabbed a job at ZS Associates as a Business Technology Solutions Associate. Post an amazing year at ZS Associates, I joined McKinsey and Company as a Junior analyst, and progressed to the role of an Analyst within a short span of 10 months. 
