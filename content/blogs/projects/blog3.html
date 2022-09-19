@@ -93,7 +93,7 @@ kable(nyse_sectors, caption = &quot;Number of Companies per Sector&quot;)</code>
     y=&quot;sectors&quot;,
     caption = &quot;Kostis Christodoulou (2022) Finance Data&quot;
      )</code></pre>
-<p><img src="/blogs/blog3_files/figure-html/companies_per_sector-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/projects/blog3_files/figure-html/companies_per_sector-1.png" width="864" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># Notice the cache=TRUE argument inthe chunk options. Because getting data is time consuming, 
 # cache=TRUE means that once it downloads data, the chunk will not run again next time you knit your Rmd
 
@@ -231,7 +231,7 @@ myStocks_returns_annual &lt;- myStocks %&gt;%
     y=&quot;density&quot;,
     caption = &quot;Kostis Christodoulou (2022) Finance Data&quot;
      )</code></pre>
-<p><img src="/blogs/blog3_files/figure-html/density_monthly_returns-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/projects/blog3_files/figure-html/density_monthly_returns-1.png" width="864" style="display: block; margin: auto;" /></p>
 </div>
 <div id="inference" class="section level2">
 <h2>Inference</h2>
@@ -255,7 +255,7 @@ ggplot(mean_sd_return, aes(x=sd_return, y = mean_return, label=symbol))+
     y=&quot;mean of monthly return&quot;,
     caption = &quot;Kostis Christodoulou (2022) Finance Data&quot;
   ) </code></pre>
-<p><img src="/blogs/blog3_files/figure-html/risk_return_plot-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/blogs/projects/blog3_files/figure-html/risk_return_plot-1.png" width="864" style="display: block; margin: auto;" /></p>
 </div>
 <div id="what-can-you-infer-from-this-plot-are-there-any-stocks-which-while-being-riskier-do-not-have-a-higher-expected-return" class="section level2">
 <h2>What can you infer from this plot? Are there any stocks which, while being riskier, do not have a higher expected return?</h2>

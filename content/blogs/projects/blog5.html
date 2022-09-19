@@ -298,7 +298,7 @@ xfit&lt;-seq(min(x,na.rm = TRUE),max(x,na.rm = TRUE),length=40)               # 
 yfit&lt;-dnorm(xfit,mean=mean(x,na.rm = TRUE),sd=sd(x,na.rm = TRUE))          #  density of normal dis
 yfit &lt;- yfit*diff(h$mids[1:2])*length(x) 
 lines(xfit, yfit, col=&quot;red&quot;, lwd=2) </code></pre>
-<p><img src="/blogs/blog5_files/figure-html/eda_on_weight-1.png" width="864" style="display: block; margin: auto;" />
+<p><img src="/blogs/projects/blog5_files/figure-html/eda_on_weight-1.png" width="864" style="display: block; margin: auto;" />
 Inference:</p>
 <p>The minimum value of weight is 30, the maximum value is 181, the median is 64, the lower quantile is 56, the upper quantile is 76, and the total number of missing values is 1004. The distribution of weights looks lightly skewed to the right. We added a normal distribution line as comparison.<br />
 </p>
@@ -341,7 +341,7 @@ ggplot(aes(x=physical_3plus,y=number))+
   ggtitle(&quot;How many children workout 3plus times?&quot;,
           subtitle = &quot;&quot;)+
   theme_bw()</code></pre>
-<p><img src="/blogs/blog5_files/figure-html/mutate_and_count-1.png" width="864" style="display: block; margin: auto;" />
+<p><img src="/blogs/projects/blog5_files/figure-html/mutate_and_count-1.png" width="864" style="display: block; margin: auto;" />
 Inference:</p>
 <p>In this first analysis we have separately shown the percentage proportion also for the NA values. 8906 kids practice sport 3plus times a week while 4404 do not. In the graph we have not included the NA values.</p>
 <div id="confidence-interval-calculation-for-the-population-proportion-of-high-schools-that-are-not-active-3-or-more-days-per-week" class="section level2">
@@ -449,7 +449,7 @@ ggplot(aes(x=physical_3plus,y=weight))+
   ggtitle(&quot;The boxplot of the weight of physical_3plus&quot;,
           subtitle = &quot;&quot;)+
   theme_bw()</code></pre>
-<p><img src="/blogs/blog5_files/figure-html/boxplot-1.png" width="864" style="display: block; margin: auto;" />
+<p><img src="/blogs/projects/blog5_files/figure-html/boxplot-1.png" width="864" style="display: block; margin: auto;" />
 Inference:</p>
 <p>Although almost similiar, there is a positive relationship between being physically active for at least 3 days a week and weight. The result is somehow counter-intuitive, since we thought that more exercise in children would reduce there weight. This might be explained by the reason that people who stay highly active take part of physically demanding sports like basket, football and similiar and have thus a higher percentage of muscle or are just bigger. One additional reason could be that kids who are slightly heavier are more incentivised to exercise more frequently.</p>
 </div>

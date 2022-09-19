@@ -77,7 +77,7 @@ params:
         url: '#'
         
       - name: Projects
-        url: blogs
+        url: blogs/projects
         
       - name: Resume
         url: docs/CV.pdf 
@@ -106,27 +106,27 @@ params:
       - image: stock_analysis.jpeg
         subtitle: Stock Analsis project 
         title: Stock Analysis
-        url: blogs/stocks
+        url: blogs/projects/stocks
         
       - image: san_fransisco.jpeg
         subtitle: In-depth analysis of rents across Bay area 
         title: San Fransisco Rent Analysis
-        url: blogs/sf_rent
+        url: blogs/projects/sf_rent
         
       - image: brexit.jpeg
         subtitle: A vote analysis study for Brexit
         title: Brexit Poll Analysis
-        url: blogs/brexit
+        url: blogs/projects/brexit
         
       - image: youth.png
         subtitle: Study of health pattern among high school students
         title: Health pattern analysis 
-        url: blogs/youth
+        url: blogs/projects/youth
         
       - image: gender.jpeg
         subtitle: Analysis of gender discrimination prevalent in salary
         title: Pay Driscimination
-        url: blogs/pay_disc  
+        url: blogs/projects/pay_disc  
         
       - image: travel_1.JPG
         subtitle: A collection of my favourite Travel memories
@@ -143,5 +143,5 @@ params:
       pellentesque lorem ipsum dolor. \r\n    Nullam et orci eu lorem consequat tincidunt.
       Vivamus et sagittis libero.\r\n    Mauris aliquet magna magna sed nunc rhoncus
       amet pharetra et feugiat tempus."
-    title: About Mehak
+    title: More about Mehak!
     url: blogs
