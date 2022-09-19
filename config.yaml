@@ -8,7 +8,7 @@ params:
   banner:
     buttonText: Get To Know Me!
     subtitle: |-
-      Currently reading for Masters in Analytics & Management (MAM) at London Business School.
+      Currently playing with data, statistics and R programming while reading for Masters in Analytics & Management (MAM) at London Business School.
       
       THIS IS MY PORTFOLIO WEBSITE for AM01 Applied Statistics. 
     title: Hi, I am  Mehak Khanna
@@ -68,9 +68,9 @@ params:
       - name: Get Started
         url: blogs
         
-    button2:
-      - name: Log In
-        url: '#'
+    # button2:
+    #   - name: Log In
+    #     url: '#'
         
     links:
       - name: Home
