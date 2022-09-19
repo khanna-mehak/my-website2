@@ -10,7 +10,7 @@ categories:
 date: 2017-10-31T22:42:51-05:00
 draft: false
 ---
-title: "My Childhood"
+# _My Childhood_
 
 Hello, I am Mehak Khanna. I was born and raised in India. I currently live in London, United Kingdom. I have lived across various cities in North and Western parts of India including Amritsar, Ahmedabad, Mumbai. Chandigarh, also known as "The City Beautiful" is my current Indian home.
 
@@ -22,7 +22,7 @@ I love the city for its calm environment and the ease of commute which lets me s
 ![My favorite spot in Chandigarh: Rock Garden](https://media.istockphoto.com/photos/army-of-statuettes-in-chandigarh-picture-id471757663?k=20&m=471757663&s=612x612&w=0&h=7rO1MgDlcbFq0VwR-SHgACruqq4ovDHrGdpKCxWzm9M=){width=100%}
 
 
-# Education
+# _Education_
 
 I have studied Bachelors in Technology at Punjab Engineering College, Chandigarh. During the course of my degree, I discovered my passion for data and grabbed a job at ZS Associates as a Business Technology Solutions Associate. Post an amazing year at ZS Associates, I joined McKinsey and Company as a Junior analyst, and progressed to the role of an Analyst within a short span of 10 months. 
 
@@ -32,7 +32,7 @@ I am currently reading for Masters in Analytics and Management at London Busines
 
 ![My Favorite spot at London Business school](https://www.london.ac.uk/sites/default/files/styles/promo_mobile/public/2017-10/london-business-school-Campus.jpg?itok=o-y3e-qT){width=100%}
 
-# Professional experiences 
+# _Professional experiences_ 
   
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfp2-v0_mvOp5W9vUBpNKVMH4A-3M7oRidg&usqp=CAU){width=100%}
 
@@ -42,13 +42,13 @@ My experience of working with McKinsey & Company and ZS Associates has led to my
 
 ![](https://www.businessbecause.com/uploads/default/news/images/b069d0845c7c19cd.png){width=100%}
 
-# Interests
+# _Interests_
 
 In addition to my professional experience, I am an enthusiastic traveller and have been to over 25+ cities across 3 continents. My source of adrenal rush includes trying roller coasters around these cities and I have covered over 30+ roller coasters including the world’s fastest and steepest ones
 
 ![My favorite park: Six Flags](https://www.thefamilyvacationguide.com/wp-content/uploads/2021/10/SFFT_Cliffhanger05_11x17_150dpi.jpeg){width=100%}
 
-# My life at London Business School
+# _My life at London Business School_
 
 I have started my journey at LBS few weeks back and am enjoying every moment of it. Excited to see what the future holds.
 

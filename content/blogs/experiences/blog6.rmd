@@ -26,35 +26,47 @@ knitr::opts_chunk$set(
   fig.align = "center"
 )
 ```
+# _Welcome to a collection of my favorite destinations_
 
-![Spain](/blogs/blog6_files/travel_2.JPG){width=100%}
 
-![Switzerland](/blogs/blog6_files/travel_3.JPG){width=100%}
+## _Spain: 2019_
 
-![](/blogs/blog6_files/travel_4.jpg){width=100%}
+![Barcelona](/blogs/blog6_files/travel_2.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_5.jpeg){width=100%}
+## _United States of America: 2018_
 
-![](/blogs/blog6_files/travel_6.JPG){width=100%}
+![Paragliding in Virginia Beach](/blogs/blog6_files/travel_4.jpg){width=100%}
+## _My Favourite city: NEW YORK_ 
 
-![](/blogs/blog6_files/travel_7.JPG){width=100%}
+![New York City](/blogs/blog6_files/travel_5.jpeg){width=100%}
+![New York City](/blogs/blog6_files/travel_17.jpeg){width=100%}
 
-![](/blogs/blog6_files/travel_8.JPG){width=100%}
+## _France: 2017_
 
-![](/blogs/blog6_files/travel_9.JPG){width=100%}
+![Eiffel Tower](/blogs/blog6_files/travel_6.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_10.JPG){width=100%}
+![Notre Dame](/blogs/blog6_files/travel_7.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_11.JPG){width=100%}
+![Seine river, Paris](/blogs/blog6_files/travel_14.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_12.JPG){width=100%}
+## _Switzerland: 2017_
 
-![](/blogs/blog6_files/travel_13.JPG){width=100%}
+![My happiness on arrival to Interlaken, Switzerland](/blogs/blog6_files/travel_10.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_14.JPG){width=100%}
+![Interlaken](/blogs/blog6_files/travel_3.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_15.JPG){width=100%}
+![Mount Titlis](/blogs/blog6_files/travel_8.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_16.JPG){width=100%}
+![My favorite picture from Mount Titlis](/blogs/blog6_files/travel_9.JPG){width=100%}
 
-![](/blogs/blog6_files/travel_17.jpeg){width=100%}
+![Rhine Falls](/blogs/blog6_files/travel_11.JPG){width=100%}
+
+![Interlaken river cruise](/blogs/blog6_files/travel_12.JPG){width=100%}
+
+![Zurich Zoo](/blogs/blog6_files/travel_13.JPG){width=100%}
+
+![Top of Europe: Jungfraujoch](/blogs/blog6_files/travel_16.JPG){width=100%}
+
+
+
+
