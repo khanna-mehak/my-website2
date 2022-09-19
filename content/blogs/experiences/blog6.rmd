@@ -27,3 +27,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+![Spain](/blogs/blog6_files/travel_2.JPG)
+
+![Switzerland](/blogs/blog6_files/travel_3.JPG)
+
