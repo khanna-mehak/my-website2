@@ -125,7 +125,7 @@ params:
         
       - image: gender.jpeg
         subtitle: Analysis of gender discrimination prevalent in salary
-        title: Pay Driscimination
+        title: Pay Discrimination
         url: blogs/projects/pay_disc  
         
       - image: travel_1.JPG
