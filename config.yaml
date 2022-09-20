@@ -96,7 +96,7 @@ params:
       - image: abt_me.jpeg
         subtitle: Learn more about me!
         title: About me
-        url: blogs/experiences/About_me
+        url: blogs/experiences_/About_me
         
       - image: cv.png
         subtitle: My academic and professional journey         
@@ -106,32 +106,32 @@ params:
       - image: stock_analysis.jpeg
         subtitle: Stock Analsis project 
         title: Stock Analysis
-        url: blogs/projects/stocks
+        url: blogs/projects_/stocks
         
       - image: san_fransisco.jpeg
         subtitle: In-depth analysis of rents across Bay area 
         title: San Fransisco Rent Analysis
-        url: blogs/projects/sf_rent
+        url: blogs/projects_/sf_rent
         
       - image: brexit.jpeg
         subtitle: A vote analysis study for Brexit
         title: Brexit Poll Analysis
-        url: blogs/projects/brexit
+        url: blogs/projects_/brexit
         
       - image: youth.png
         subtitle: Study of health pattern among high school students
         title: Health pattern analysis 
-        url: blogs/projects/youth
+        url: blogs/projects_/youth
         
       - image: gender.jpeg
         subtitle: Analysis of gender discrimination prevalent in salary
         title: Pay Discrimination
-        url: blogs/projects/pay_disc  
+        url: blogs/projects_/pay_disc  
         
       - image: travel_1.JPG
         subtitle: A collection of my favourite Travel memories
         title: My Travel Stories
-        url: blogs/experiences/travel
+        url: blogs/experiences_/travel
         
      
   two:
