@@ -96,7 +96,7 @@ params:
       - image: abt_me.jpeg
         subtitle: Learn more about me!
         title: About me
-        url: blogs/experiences/About_me
+        url: blogs/experiences/About
         
       - image: cv.png
         subtitle: My academic and professional journey         

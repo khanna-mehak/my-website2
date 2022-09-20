@@ -1,7 +1,7 @@
 ---
 title: "Welcome to my world"
 description: "A sneak peak into my life. Read to know my professional and personal accomplishments "
-slug: "About_me"
+slug: "About"
 image: abt_me_1.JPG
 keywords: ""
 categories: 
